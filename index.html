@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Julia Estética</title>
+  <style>
+    :root {
+      --bg: #F5F5F5;
+      --card: #FFF;
+      --text-primary: #333;
+      --text-secondary: #555;
+      --cta: #8C6D5B;
+      --cta-hover: #A4897A;
+      --link: #6E6E6E;
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    body { margin: 0; background: var(--bg); color: var(--text-primary); }
+    a { color: var(--link); text-decoration: none; }
+    header { background: #FFF; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    nav { display: flex; gap: 15px; justify-content: center; }
+    nav a { font-weight: 600; }
+    .hero {
+      background: var(--card) url('hero-image.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; color: var(--text-secondary); }
+    .cta-button {
+      background: var(--cta);
+      color: #FFF;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-button:hover { background: var(--cta-hover); }
+    .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .card h3 { margin-top: 0; color: var(--text-primary); }
+    .about {
+      text-align: center;
+      background: var(--card);
+      padding: 40px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .form-section {
+      background: var(--card);
+      padding: 40px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 60px;
+    }
+    .form-section form {
+      display: grid;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    .form-section input,
+    .form-section textarea {
+      padding: 12px;
+      border: 1px solid #DDD;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .form-section button {
+      background: var(--cta);
+      color: #FFF;
+      padding: 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .form-section button:hover { background: var(--cta-hover); }
+    footer {
+      background: var(--card);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    footer a { color: var(--link); }
+    @media(max-width:600px){
+      .hero { padding: 60px 10px; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+       <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 10px 20px;">
+    <img src="/storage/emulated/0/Pictures/Gallery/owner/estética/logo.png" alt="Julia Estética" style="height: 60px;">
+    <nav style="display: flex; gap: 15px;">
+      <a href="#">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#contato">Preços</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vinda à Julia Estética</h1>
+    <p>Transformamos sua beleza com tecnologia, cuidado e excelência em estética facial e corporal.</p>
+    <button class="cta-button" href="https://wa.me/5532999543126">Agende sua consulta</button>
+  </section>
+
+  <div class="container">
+    <div id="praticas" class="cards">
+      <div class="card"><h3>Especialistas Qualificadas</h3><p>Profissionais treinadas para realçar sua beleza com segurança.</p></div>
+      <div class="card"><h3>Tecnologia Avançada</h3><p>Equipamentos modernos e resultados de alto padrão.</p></div>
+      <div class="card"><h3>Atendimento Exclusivo</h3><p>Cuidado personalizado e acompanhamento dedicado.</p></div>
+    </div>
+
+    <section id="tratamentos" class="container">
+      <h2>Tratamentos de Estética</h2>
+      <div class="cards">
+        <div class="card"><h3>Limpeza de Pele</h3><p>Profunda, com extração e hidratação.</p></div>
+        <div class="card"><h3>Harmonização Facial</h3><p>Toxina, preenchimento, bioestimuladores.</p></div>
+        <div class="card"><h3>Corpo</h3><p>Drenagem, massagem modeladora, criolipólise.</p></div>
+        <div class="card"><h3>Rejuvenescimento</h3><p>Microagulhamento, peeling, laser.</p></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <h2>Sobre a Julia Estética</h2>
+      <p>Sou formada no curso técnico em Estética, onde desenvolvi inúmeras habilidades práticas e teóricas que me permitiram transformar o cuidado com a beleza em uma verdadeira paixão. Ao longo dessa trajetória, ajudei muitas mulheres a realizarem seus sonhos e recuperarem sua autoestima.</p>
+      <p>Atualmente, sou graduanda em Estética e Cosmética, em constante aperfeiçoamento. Tenho me dedicado a aprender novas técnicas, tendências e tecnologias para oferecer tratamentos ainda mais completos e eficazes. Cada atendimento é pensado com carinho, profissionalismo e foco em realçar a beleza natural de cada cliente.</p>
+      <p></p>
+    </section>
+  </div>
+    <section id="contato" style="background-color: #fdf6f9; padding: 60px 20px;">
+  <div style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 20px; color: #c77b99;">Pronta para se redescobrir?</h2>
+    <p style="font-size: 18px; color: #555;">
+      Se você deseja elevar sua autoestima, se cuidar com carinho e transformar sua beleza, estou aqui para te ajudar!  
+      Clique no botão abaixo e agende seu atendimento com quem entende de cuidado e transformação.
+    </p>
+    <a href="https://wa.me/5532999543126?text=Olá%2C%20gostaria%20de%20agendar%20um%20atendimento%20na%20Julia%20Estética."
+       target="_blank"
+       style="
+         display: inline-block;
+         margin-top: 30px;
+         background-color: #c77b99;
+         color: white;
+         padding: 15px 30px;
+         border-radius: 50px;
+         font-size: 16px;
+         text-decoration: none;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       ">
+       Agendar meu horário
+    </a>
+  </div>
+</section>
+  </div>
+
+  <footer>
+    <p>Atendimento em Bicas e região</p>
+    <p><a href="https://www.instagram.com/estetica_juliam?igsh=MXBraTRveG9xcGN0Yw==">Instagram</a> | <a href="">WhatsApp</a></p>
+    <p>© 2025 Julia Estética. Todos os direitos reservados.</p>
+  </footer>
+<a href="https://wa.me/5532999543126?text=Olá%2C%20gostaria%20de%20agendar%20um%20atendimento%20na%20Julia%20Estética."
+   target="_blank"
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #25D366;
+     color: white;
+     padding: 15px 20px;
+     border-radius: 50px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     font-size: 16px;
+     text-decoration: none;
+     z-index: 9999;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+   ">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+       alt="WhatsApp"
+       style="width: 24px; height: 24px;">
+</a>
+
+</body>
+</html>
+</body>
+</html>
